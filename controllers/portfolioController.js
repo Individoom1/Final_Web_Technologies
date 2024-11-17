@@ -1,6 +1,5 @@
 const PortfolioItem = require('../models/PortfolioItem');
 
-// 1. Показать все элементы
 exports.getAllItems = async (req, res) => {
   try {
     const items = await PortfolioItem.find();
@@ -10,12 +9,10 @@ exports.getAllItems = async (req, res) => {
   }
 };
 
-// 2. Показать форму для создания элемента
 exports.renderCreateForm = (req, res) => {
   res.render('portfolio/create');
 };
 
-// 3. Создать новый элемент
 exports.createItem = async (req, res) => {
   try {
     const { title, description, images } = req.body;
@@ -28,7 +25,6 @@ exports.createItem = async (req, res) => {
   }
 };
 
-// 4. Показать форму для редактирования
 exports.renderEditForm = async (req, res) => {
   try {
     const item = await PortfolioItem.findById(req.params.id);
@@ -38,7 +34,6 @@ exports.renderEditForm = async (req, res) => {
   }
 };
 
-// 5. Обновить элемент
 exports.updateItem = async (req, res) => {
   try {
     const { title, description, images } = req.body;
@@ -55,7 +50,7 @@ exports.updateItem = async (req, res) => {
   }
 };
 
-// 6. Удалить элемент
+
 exports.deleteItem = async (req, res) => {
   try {
     await PortfolioItem.findByIdAndDelete(req.params.id);
