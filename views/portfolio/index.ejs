@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+<h1>Portfolio</h1>
+<a href="/portfolio/create">Add New Item</a>
+<div>
+  <% items.forEach(item => { %>
+    <div>
+      <h2><%= item.title %></h2>
+      <p><%= item.description %></p>
+      <div class="carousel">
+        <% item.images.forEach(image => { %>
+          <img src="<%= image %>" alt="<%= item.title %>">
+        <% }) %>
+      </div>
+      <a href="/portfolio/edit/<%= item._id %>">Edit</a>
+      <form action="/portfolio/delete/<%= item._id %>" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  <% }) %>
+</div>
+<%- include('../partials/footer') %>
