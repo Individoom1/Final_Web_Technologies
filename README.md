@@ -28,10 +28,10 @@ Additionally, for ease of use, you can add "dev": "nodemon app.js" to the script
 
 So, the main page includes Login, Register, and Portfolio:
 
-![Screenshot (1889)](https://github.com/user-attachments/assets/cf1adce9-3f23-4a4a-976c-f875fd12197a)
+![Screenshot (1890)](https://github.com/user-attachments/assets/70fb4a7c-a905-4fa6-a909-33f6fbd2569b)
 
-![Screenshot (1888)](https://github.com/user-attachments/assets/ad634a15-3657-401e-90e3-f825515b151f)
 
+![Screenshot (1891)](https://github.com/user-attachments/assets/7d211149-937a-48cc-a9bd-a162f2a8f7a5)
 
 
 
